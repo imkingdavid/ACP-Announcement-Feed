@@ -44,14 +44,21 @@ This MOD was created during my free time, and is being released for free. If you
 	<action-group>
 		<copy>
 			<file from="root/includes/functions_announcement_feed.php" to="includes/functions_announcement_feed.php" />
-			<file from="root/adm/style/acp_announcement_feed.html" to="adm/style/acp_announcement_feed.html" />
 		</copy>
 		
 		<open src="includes/acp/acp_main.php">
 			<edit>
-				<find><![CDATA[// Get forum statistics
-		$total_posts = $config['num_posts'];]]></find>
-				<action type="before-add"><![CDATA[		//--------------------
+				<find><![CDATA[		//--------------------
+		// ACP Announcements Feed MOD | imkingdavid
+		// Get announcements
+		if(!class_exists('announcement_feed'))
+		{
+			include("{$phpbb_root_path}includes/functions_announcement_feed.$phpEx");
+		}
+		$acp_feed = new announcement_feed();
+		// All done
+		//--------------------]]></find>
+				<action type="replace-with"><![CDATA[		//--------------------
 		// ACP Announcements Feed MOD | imkingdavid
 		// Get announcements
 		if(!function_exists('announcement_feed'))
@@ -61,29 +68,6 @@ This MOD was created during my free time, and is being released for free. If you
 		announcement_feed();
 		// All done
 		//--------------------]]></action>
-			</edit>
-		</open>
-		<open src="adm/style/acp_main.html">
-			<edit>
-				<find><![CDATA[<table cellspacing="1">
-		<caption>{L_FORUM_STATS}</caption>
-		<col class="col1" /><col class="col2" /><col class="col1" /><col class="col2" />
-	<thead>]]></find>
-				<action type="before-add"><![CDATA[   <!-- INCLUDE acp_announcement_feed.html -->]]></action>
-			</edit>
-		</open>
-		<open src="language/en/acp/common.php">
-			<edit>
-				<find><![CDATA['AVATAR_DIR_SIZE'			=> 'Avatar directory size',]]></find>
-				<action type="after-add"><![CDATA[	//--------------------
-	// ACP Announcements Feed MOD | imkingdavid
-	'ACP_NEWS_FEED'			=> 'phpBB.com Announcements',
-	'ACP_NEWS_FEED_ERROR'	=> 'There was an error fetching the news feed from phpBB.com. Please visit the website for the latest announcements.',
-	'ACP_NEWS_FEED_NONE'	=> 'There are no items to display here.',
-	'NEWS_TITLE'			=> 'Title',
-	'NEWS_AUTHOR'			=> 'Author',
-	'NEWS_DATE'				=> 'Date',
-	//--------------------]]></action>
 			</edit>
 		</open>
 		
