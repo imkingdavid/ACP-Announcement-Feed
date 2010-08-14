@@ -19,7 +19,10 @@ function announcement_feed($limit = 10)
 {
 	global $template, $user;
 	$news_array = simplexml_load_file('http://www.phpbb.com/feeds/index.php');
-	$template->assign_var('S_NEWS_CONNECT_FAIL', ($news_array) ? true : false);
+	if(!$news_array)
+	{
+		$template->assign_var('S_NEWS_CONNECT_FAIL', true);
+	}
 	$limit = 10;
 	$current = 0;
 	$children = $news_array->children();
