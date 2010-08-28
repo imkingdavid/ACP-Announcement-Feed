@@ -45,8 +45,4 @@ function announcement_feed($limit = 10)
 			}
 		}
 	}
-	if (!$news_array)
-	{
-		return false;
-	}
 }
