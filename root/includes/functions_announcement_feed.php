@@ -23,7 +23,6 @@ function announcement_feed($limit = 10)
 	{
 		$template->assign_var('S_NEWS_CONNECT_FAIL', true);
 	}
-	$limit = 10;
 	$current = 0;
 	$children = $news_array->children();
 	foreach($children as $child)
