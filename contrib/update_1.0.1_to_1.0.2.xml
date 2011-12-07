@@ -29,7 +29,7 @@ This MOD was created during my free time, and is being released for free. If you
                 <rev-version>1.0.2</rev-version>
                 <changelog lang="en">
                     <change><![CDATA[[fix] Fix the breakage caused when server configuration disallows accessing remote URLS with simplexml_load_file (allow_url_fopen is disabled)]]></change>
-                </changelog lang="en">
+                </changelog>
             </entry>
             <entry>
 				<date>2010-08-14</date>
