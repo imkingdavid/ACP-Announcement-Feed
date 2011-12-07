@@ -13,17 +13,24 @@ This MOD was created during my free time, and is being released for free. If you
 			<author>
 				<realname><![CDATA[David King]]></realname>
 				<username><![CDATA[imkingdavid]]></username>
-				<homepage><![CDATA[http://www.phpbbdevelopers.net/]]></homepage>
+				<homepage><![CDATA[http://www.thedavidking.com/]]></homepage>
 				<email><![CDATA[imkingdavid@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.0.1</mod-version>
+		<mod-version>1.0.2</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>120</time>
-			<target-version>3.0.7-PL1</target-version>
+			<target-version>3.0.9</target-version>
 		</installation>
 		<history>
+            <entry>
+                <date>2011-12-07</date>
+                <rev-version>1.0.2</rev-version>
+                <changelog lang="en">
+                    <change><![CDATA[[fix] Fix the breakage caused when server configuration disallows accessing remote URLS with simplexml_load_file (allow_url_fopen is disabled)]]></change>
+                </changelog lang="en">
+            </entry>
 			<entry>
 				<date>2010-08-14</date>
 				<rev-version>1.0.1</rev-version>
