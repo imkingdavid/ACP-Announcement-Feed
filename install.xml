@@ -7,7 +7,8 @@
 		<license><![CDATA[http://opensource.org/licenses/gpl-license.php GNU General Public License v2]]></license>
 		<title lang="en"><![CDATA[ACP Announcements Feed]]></title>
 		<description lang="en"><![CDATA[This MOD displays a list of the latest phpBB.com Announcements on the main page of the ACP. Each title is linked to the announcement topic.]]></description>
-		<author-notes lang="en"><![CDATA[Please follow all installation instructions. Support is provided at http://www.phpbbdevelopers.net/.
+		<author-notes lang="en"><![CDATA[This MOD requires PHP 5 and SimpleXMLElement.
+        Please follow all installation instructions. Support is provided at http://www.phpbbdevelopers.net/.
 This MOD was created during my free time, and is being released for free. If you feel that this MOD is useful, please consider making a donation to me by visiting my website and clicking Donate. All donations are appreciated, but none are required. A donation of $5 or more will automatically add you to the Contributors group on the forum, allowing for premium support and more.]]></author-notes>
 		<author-group>
 			<author>
